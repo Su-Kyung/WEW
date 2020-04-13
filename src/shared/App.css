@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +35,202 @@
   to {
     transform: rotate(360deg);
   }
+} */
+
+
+.App {
+  text-align: center;
 }
+
+.App-logo {
+  height: 20vmin;
+  pointer-events: none;
+}
+
+/* .App-header {
+  background-color: white;
+  min-height: 20vh;
+  font-size: calc(30px + 2vmin);
+  color: #27385e;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+} */
+
+
+.App-header-logo {
+  max-width: 188px;
+  height: auto;
+  margin-top: 101.6px;
+  margin-bottom: 62.2px;
+  margin-left: 866px;
+  margin-right: 702.6;
+}
+
+.App-body {
+  background-color: #27385e;
+}
+
+.Button-menu {
+  max-width: 71.2px;
+  height: auto;
+  float: right;
+  margin-top: 112px;
+  margin-right: 92.3px;
+}
+
+/* .App-home-body {
+  background-color: white;
+  min-height: 50vh;
+  font-size: calc(10px + 2vmin);
+  color: #27385e;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+} */
+
+.Line-introduce  {
+  width: 1.4px;
+  height: 180.9px;
+  border: solid 0.5px #ffffff;
+  background-color: #27385e;
+  margin-left: 959.5px;
+}
+
+.Home-introduce {
+  max-width: 334.6px;
+  height: auto;
+  margin-top: 70.6px;
+  margin-bottom: 57.5px;
+  margin-left: 793px;
+}
+
+.Home-body {
+  height: 569px;
+  background-color: #27385e;
+}
+
+.Home-input-name {
+  max-width: 424px;
+  height: auto;
+  margin-top: 75px;
+  margin-left: 748px;
+}
+
+.Home-input-email {
+  max-width: 424px;
+  height: auto;
+  margin-top: 9px;
+  margin-left: 748px;
+}
+
+.Home-policy {
+  max-width: 359px;
+  height: auto;
+  margin-top: 14px;
+  margin-left: 781px;
+}
+
+.Home-btn-subscribe {
+  max-width: 157.9px;
+  height: auto;
+  margin-top: 34.4px;
+  margin-left: 880.6px;
+  margin-bottom: 69.7px;
+}
+
+.Line-border {
+  max-width: 1731.7px;
+  height: auto;
+  margin-left: 94px;
+}
+
+.About {
+  max-width: 278.1px;
+  height: auto;
+  margin-left: 644.8px;
+  margin-bottom: 49.5px;
+}
+
+.About-line {
+  width: 1739.2px;
+  height: auto;
+  background-color: #808080;
+  margin-left: 90px;
+}
+
+.About-quote {
+  width: 480.3px;
+  height: auto;
+  margin-top: 99.4px;
+  margin-left: 720px;
+  margin-bottom: 98.7px;
+}
+
+.About-body1 {
+  height: 818px;
+  background-color: #27385e;
+}
+
+.About-empower {
+  width: 504.2px;
+  height: auto;
+  margin-top: 120.5px;
+  margin-left: 706.8px;
+}
+
+.About-logo {
+  width: 343.3px;
+  height: auto;
+  margin-top: 89.9px;
+  margin-left: 787.5px;
+  margin-bottom: 91.7px;
+}
+
+.About-introduce {
+  width: 618.3px;
+  height: auto;
+  margin-left: 649.1px;
+  margin-bottom: 125.3px;
+}
+
+.About-body2 {
+  width: 100%;
+  height: 2610px;
+  background-color: #ffffff;
+}
+
+.Feedback {
+  max-width: 281.7px;
+  height: auto;
+  margin-left: 663.5px;
+  margin-bottom: 24.7px;
+}
+
+.Feedback-waiting {
+  max-width: 587.2px;
+  height: auto;
+  margin-left: 666px;
+  margin-bottom: 50.3px;
+}
+
+.Feedback-btn-submit {
+  max-width: 184.6px;
+  height: auto;
+  margin-top: 54px;
+  margin-left: 1083.4px;
+  margin-bottom: 30px;
+}
+
+.Feedback-body {
+  width: 100%;
+  height: 829.1px;
+  background-color: #27385e;
+}
+
+/* .Feedback-input {
+  max-width: 75.8px;
+  height: auto;
+  margin-left: 646.5;
+  margin-top: 30px;
+} */

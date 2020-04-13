@@ -10,6 +10,10 @@ class App extends Component {
   render() {
     return (
       <div>
+        <div>
+          <img class="App-header-logo" src="/logo_indigo.png"/>
+          <img class="Button-menu" src="/btn_menu.png"/>
+        </div>
         <Route exact path="/" component={Home}/>
         <Route path="/about" component={About}/>
         <Route path="/feedback" component={Feedback}/>

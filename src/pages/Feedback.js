@@ -3,9 +3,15 @@ import React from 'react';
 const Feedback = () => {
     return (
         <div>
-            <h2>
-                구독자 피드백 페이지 (Feedback)
-            </h2>
+            <div>
+                <img class="Feedback" src="page_feedback.png"/>
+                <img class="Feedback-waiting" src="feedback_waiting.png"/>
+            </div>
+            <div class="Feedback-body">
+                <img class="Feedback-btn-submit" src="btn_submit.png"/>
+                {/* <img class="Feedback-input" src="feedback_email.png"/> */}
+                <img class="Home-input-email" src="input_box.png"/>
+            </div>
         </div>
     )
 }
