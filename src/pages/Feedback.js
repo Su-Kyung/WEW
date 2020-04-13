@@ -19,19 +19,13 @@ const Feedback = () => {
                 <img class="Home-input-email" src="input_box.png"/> */}
                 <TextField
                     id="feedback_email"
-                    label="이메일"
                     variant="outlined"
                     defaultValue="회신받을 이메일 주소를 입력하세요." />
                 <TextField
                     id="feedback_contents"
-                    label="내용"
                     variant="outlined"
                     multiline
                     defaultValue="내용을 입력하세요." />
-
-
-                
-                
 
             </div>
         </div>
