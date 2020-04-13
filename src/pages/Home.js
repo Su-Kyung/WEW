@@ -28,7 +28,7 @@ const Home = () => {
 
                     {/* 제출 버튼
                     <img class="Home-btn-subscribe" src="btn_subscribe.png"/> */}
-                    <Button id="btn_subscribe" variant="outlined">제출하기</Button>
+                    <Button id="btn_subscribe" variant="outlined">구독하기</Button>
 
                     <img class="Line-border" src="line_border.png"/>
                 </div>
