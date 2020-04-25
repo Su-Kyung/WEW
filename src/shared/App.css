@@ -57,14 +57,17 @@
   align-items: center;
 } */
 
+.App-header {
+  height: 248px;
+  width: 1920px;
+  background-color: #ffffff;
+}
 
 .App-header-logo {
   max-width: 188px;
   height: auto;
   margin-top: 101.6px;
-  margin-bottom: 62.2px;
   margin-left: 866px;
-  margin-right: 702.6;
 }
 
 .App-body {
@@ -72,11 +75,15 @@
 }
 
 .Button-menu {
-  max-width: 71.2px;
+  width: 71.2px;
   height: auto;
   float: right;
   margin-top: 112px;
   margin-right: 92.3px;
+  src: "/btn_menu.png";
+  border: none;
+  outline: none;
+  background-color: #ffffff;
 }
 
 /* .App-home-body {
