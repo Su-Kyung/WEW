@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function ClickAway() {
-  const classes = useStyles();
+//   const classes = useStyles();
   const [open, setOpen] = React.useState(false);
 
   const handleClick = () => {
@@ -32,12 +32,12 @@ export default function ClickAway() {
 
   return (
     <ClickAwayListener onClickAway={handleClickAway}>
-      <div className={classes.root}>
+      <div >
         <button type="button" onClick={handleClick}>
           Open menu dropdown
         </button>
         {open ? (
-          <div className={classes.dropdown}>
+          <div >
             Click me, I will stay visible until you click outside.
           </div>
         ) : null}

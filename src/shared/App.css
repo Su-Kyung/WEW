@@ -241,3 +241,15 @@
   margin-left: 646.5;
   margin-top: 30px;
 } */
+
+
+
+/* 20200516 dialog */
+.Menu-appBar {
+  position: relative;
+}
+
+.Menu-title {
+  margin-left: spacing(2);
+  flex: 1;
+}

@@ -11,16 +11,24 @@ import Toolbar from "@material-ui/core/Toolbar";
 import IconButton from "@material-ui/core/IconButton";
 import Typography from "@material-ui/core/Typography";
 import MenuIcon from "@material-ui/icons/Menu";
-import ClickAway from '../components/example';
+
+// import ClickAway from '../components/example';
+import FullScreenDialog from '../components/menu';
+
+
 
 
 // 앱 컴포넌트: 어떤 주소로 왔을 때 무엇을 보여줄지 정의
 class App extends Component {
   render() {
-    const setOpen = false;
-    const handleClickOpen = () => {
-      setOpen=true;
-    };
+    // const setOpen = false;
+    // const handleClickOpen = () => {
+    //   setOpen=true;
+    // };
+    // const handleClickClose = () => {
+    //   setOpen=false;
+    // };
+
 
     return (
       <div>
@@ -31,10 +39,8 @@ class App extends Component {
             <img src="/btn_menu.png" width="71.2px" height="auto" text-align="center"/>
             <img src="/btn_menu.png" width="71.2px" height="auto" text-align="center" onClick={handleClickOpen}/>
           </Button>
-
-          
-
         </header> */}
+
         <Toolbar>
         {/* <Typography marginLeft="theme.spacing(17)" flex="1" >WEW</Typography> */}
         <img class="App-header-logo" src="/logo_indigo.png" />
@@ -45,7 +51,7 @@ class App extends Component {
         </Button>
         */}
         {/* 메뉴 아이콘 */}
-          <IconButton type="button" onClick={ClickAway}><MenuIcon /></IconButton>
+          <IconButton type="button" onClick={FullScreenDialog}><MenuIcon /></IconButton>
         </Toolbar>
         <Route exact path="/" component={Home}/>
         <Route path="/about" component={About}/>
@@ -54,6 +60,13 @@ class App extends Component {
     );
   }
 }
+
+
+
+
+
+
+
 
 export default App;
 
