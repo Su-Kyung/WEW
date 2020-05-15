@@ -7,25 +7,46 @@ import { Home, About, Feedback } from 'pages';
 import Button from '@material-ui/core/Button';
 
 
+import Toolbar from "@material-ui/core/Toolbar";
+import IconButton from "@material-ui/core/IconButton";
+import Typography from "@material-ui/core/Typography";
+import MenuIcon from "@material-ui/icons/Menu";
+import ClickAway from '../components/example';
 
 
 // 앱 컴포넌트: 어떤 주소로 왔을 때 무엇을 보여줄지 정의
 class App extends Component {
   render() {
+    const setOpen = false;
+    const handleClickOpen = () => {
+      setOpen=true;
+    };
+
     return (
       <div>
-        <header class="App-header">
+        {/* <header class="App-header">
           <img class="App-header-logo" src="/logo_indigo.png"/>
    
           <Button id="btn_menu" class="Button-menu">
             <img src="/btn_menu.png" width="71.2px" height="auto" text-align="center"/>
-            {/* <img src="/btn_menu.png" width="71.2px" height="auto" text-align="center" onClick={handleClickOpen}/> */}
+            <img src="/btn_menu.png" width="71.2px" height="auto" text-align="center" onClick={handleClickOpen}/>
           </Button>
 
-          {/* Customized Dialog 추가 */}
           
 
-        </header>
+        </header> */}
+        <Toolbar>
+        {/* <Typography marginLeft="theme.spacing(17)" flex="1" >WEW</Typography> */}
+        <img class="App-header-logo" src="/logo_indigo.png" />
+        {/* 
+            버리는 코드
+            <Button id="btn_menu" class="Button-menu" >
+            <img src="/btn_menu.png" width="71.2px" height="auto" text-align="center" onClick={handleClickOpen}/>
+        </Button>
+        */}
+        {/* 메뉴 아이콘 */}
+          <IconButton type="button" onClick={ClickAway}><MenuIcon /></IconButton>
+        </Toolbar>
         <Route exact path="/" component={Home}/>
         <Route path="/about" component={About}/>
         <Route path="/feedback" component={Feedback}/>
