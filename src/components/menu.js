@@ -13,51 +13,50 @@ import Typography from '@material-ui/core/Typography';
 import CloseIcon from '@material-ui/icons/Close';
 import Slide from '@material-ui/core/Slide';
 
-// const useStyles = makeStyles((theme) => ({
-//   appBar: {
-//     position: 'relative',
-//   },
-//   title: {
-//     marginLeft: theme.spacing(2),
-//     flex: 1,
-//   },
-// }));
+const useStyles = makeStyles((theme) => ({
+  appBar: {
+    position: 'relative',
+  },
+  title: {
+    marginLeft: theme.spacing(2),
+    flex: 1,
+  },
+}));
+
+const Click = () => {
+  const classes = useStyles();
+  const [open, setOpen] = React.useState(false);
+
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+}
 
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
 });
 
 export default function FullScreenDialog() {
-//   const classes = useStyles();
-//   const [open, setOpen] = React.useState(false);
-    const setOpen = false;
-    const open = false;
-
-  const handleClickOpen = () => {
-    setOpen(true);
-    open(true);
-  };
-
-  const handleClose = () => {
-    setOpen(false);
-    open(false);
-  };
 
   return (
     <div>
-      <Button variant="outlined" color="primary" onClick={handleClickOpen}>
+      <Button variant="outlined" color="primary" onClick={Click.han}>
         Open full-screen dialog
       </Button>
-      <Dialog fullScreen open={open} onClose={handleClose} TransitionComponent={Transition}>
+      <Dialog fullScreen onClose={Click.handleClose} TransitionComponent={Transition}>
         <AppBar class="Menu-appBar">
           <Toolbar>
-            <IconButton edge="start" color="inherit" onClick={handleClose} aria-label="close">
+            <IconButton edge="start" color="inherit" onClick={Click.handleClose} aria-label="close">
               <CloseIcon />
             </IconButton>
             <Typography variant="h6" class="Menu-title">
               Sound
             </Typography>
-            <Button autoFocus color="inherit" onClick={handleClose}>
+            <Button autoFocus color="inherit" onClick={Click.handleClose}>
               save
             </Button>
           </Toolbar>

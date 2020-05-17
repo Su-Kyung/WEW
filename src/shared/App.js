@@ -13,8 +13,9 @@ import Typography from "@material-ui/core/Typography";
 import MenuIcon from "@material-ui/icons/Menu";
 
 // import ClickAway from '../components/example';
-import FullScreenDialog from '../components/menu';
+// import FullScreenDialog from '../components/menu';
 
+import SimpleDialogDemo from '../components/simple';
 
 
 
@@ -51,7 +52,9 @@ class App extends Component {
         </Button>
         */}
         {/* 메뉴 아이콘 */}
-          <IconButton type="button" onClick={FullScreenDialog}><MenuIcon /></IconButton>
+          {/* <IconButton type="button" onClick={FullScreenDialog}><MenuIcon /></IconButton> */}
+          <IconButton type="button" onClick={SimpleDialogDemo.HandleClickOpen}><MenuIcon /></IconButton>
+          
         </Toolbar>
         <Route exact path="/" component={Home}/>
         <Route path="/about" component={About}/>
