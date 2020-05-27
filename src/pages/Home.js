@@ -4,7 +4,16 @@ import Button from '@material-ui/core/Button';
 import Container from '@material-ui/core/Container';
 import { createMuiTheme, withStyles, makeStyles, ThemeProvider } from '@material-ui/core/styles';
 
+
 const useStyles = makeStyles((theme) => ({
+    // container: {
+    //     '& > *': {
+    //         FlexDirection="column",
+    //         flex="1",
+    //         alignItems="center",
+    //         color="red",
+    //     },
+    //   },
     textfield: {
       '& > *': {
         margin: theme.spacing(0.7),
@@ -16,7 +25,10 @@ const useStyles = makeStyles((theme) => ({
     },
     button: {
         '& > *': {
-          titleColor: '#fff',
+        //   color: "white",
+        //   border: "1px solid white",
+          background: "btn_subscribe.png",
+          width: "157.9px",
         },
       },
   }));
@@ -36,7 +48,7 @@ const Home = () => {
                     <img class="Home-introduce" src="home_introduce.png"/>
                 </div>
                 <div class="Home-body">
-                    <Container maxWidth="sm">
+                    <Container maxWidth="sm" text-align="center">
                     <form className={classes.textfield} noValidate autoComplete="off">
 
                     <TextField
@@ -53,18 +65,12 @@ const Home = () => {
 
                     {/* 개인정보 정책에 연결시켜주는 버튼
                     <img class="Home-policy" src=""/> */}
-
-
-                    
                     </form>
-                    {/* 제출 버튼
-                    <img class="Home-btn-subscribe" src="btn_subscribe.png"/> */}
-                    <Button
-                        id="btn_subscribe"
-                        variant="outlined"
-                        titleColor="#fff"
-                        className={classes.button}
-                        >구독하기</Button>
+
+                    <Button><img src="btn_subscribe.png" width="157.9px"></img></Button>
+                    
+                    
+                    
                     </Container>
                     <img class="Line-border" src="line_border.png"/>
                 </div>
