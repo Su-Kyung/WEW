@@ -22,14 +22,6 @@ const useStyles = makeStyles((theme) => ({
         margin: '9px',
       },
     },
-    button: {
-        '& > *': {
-        //   color: "white",
-        //   border: "1px solid white",
-          background: "btn_subscribe.png",
-          width: "157.9px",
-        },
-      },
   }));
 
 
@@ -46,9 +38,7 @@ const Home = () => {
                 <div>
                     <img class="Home-introduce" src="home_introduce.png"/>
                 </div>
-                {/* <div class="Home-body"> */}
                 <div className={classes.root} class="Home-body">
-                    {/* <Container maxWidth="sm" alighItems="center"> */}
                     <Grid 
                         container
                         direction="column"
@@ -60,14 +50,17 @@ const Home = () => {
                                 id="input_name"
                                 placeholder="이름을 입력하세요."
                                 variant="outlined"
-                                fullWidth="true"/>
+                                fullWidth="true"
+                                // inputProps={{style: {fontSize: 19}}} 폰트 사이즈 변경
+                                />
                         </Grid>
                         <Grid item xs={12}> 
                             <TextField
                                 id="input_email"
                                 placeholder="이메일을 입력하세요."
                                 variant="outlined"
-                                fullWidth="true"/>
+                                fullWidth="true"
+                                InputLabelProps={{style: {fontSize: 19}}}/>
                         </Grid>
                             {/* 개인정보 정책에 연결시켜주는 버튼
                             <img class="Home-policy" src=""/> */}
@@ -76,8 +69,7 @@ const Home = () => {
                             <Button><img src="btn_subscribe.png" width="157.9px"></img></Button>
                         </Grid>
                     </Grid>
-                    
-                    {/* </Container> */}
+
                     <img class="Line-border" src="line_border.png"/>
                 </div>
             </body>
