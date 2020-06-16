@@ -32,13 +32,24 @@ const Home = () => {
     return (
         <div>
             <body>
-                <div>
-                    <img class="Line-introduce" src="line_home_introduce.png"/>
-                </div>
-                <div>
-                    <img class="Home-introduce" src="home_introduce.png"/>
-                </div>
-                <div className={classes.root} class="Home-body">
+            <div class="Home-header">
+                <Grid 
+                    container
+                    direction="column"
+                    justify="center"
+                    alignItems="center">
+                    
+                    <div>
+                        <img class="Line-introduce" src="line_home_introduce.png"/>
+                    </div>
+                    <div>
+                        <img class="Home-introduce" src="home_introduce.png"/>
+                    </div> 
+                    
+                </Grid>
+            </div>
+
+            <div className={classes.root} class="Home-body">
                     <Grid 
                         container
                         direction="column"
@@ -72,6 +83,12 @@ const Home = () => {
 
                     <img class="Line-border" src="line_border.png"/>
                 </div>
+
+
+
+
+        
+                
             </body>
         </div>
     )

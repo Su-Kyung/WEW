@@ -31,31 +31,7 @@ class App extends Component {
           
         </Toolbar>
 
-        <div flexGrow={1} class="Home-header">
-        <Grid 
-          container
-          direction="column"
-          justify="center"
-          alignItems="center">
-          
-            <Grid item xs={12}>    
-              <img class="App-header-logo" src="/logo_indigo.png" />
-            </Grid>
-            <Grid item xs={12}> 
-                       
-            </Grid>
-                            
-          
-                        <Grid item xs={12}>
-                            <Button><img src="btn_subscribe.png" width="157.9px"></img></Button>
-                        </Grid>
-                    </Grid>
-
-                    <img class="Line-border" src="line_border.png"/>
-        </div>
-
-
-
+        
 
         <Route exact path="/" component={Home}/>
         <Route path="/about" component={About}/>
