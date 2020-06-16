@@ -22,6 +22,11 @@ const useStyles = makeStyles((theme) => ({
         margin: '9px',
       },
     },
+    head: {
+        '& > *': {
+            flexGrow: 1,
+        },
+    }
   }));
 
 
@@ -32,50 +37,42 @@ const Home = () => {
     return (
         <div>
             <body>
-            <div class="Home-header">
-                <Grid 
-                    container
-                    direction="column"
-                    justify="center"
-                    alignItems="center">
-                    
-                    <div>
-                        <img class="Line-introduce" src="line_home_introduce.png"/>
-                    </div>
-                    <div>
-                        <img class="Home-introduce" src="home_introduce.png"/>
-                    </div> 
-                    
-                </Grid>
-            </div>
 
-            <div className={classes.root} class="Home-body">
+                <div class="Home-head">
+                    <img class="Line-introduce" src="line_home_introduce.png"/>
+                    <img class="Home-introduce" src="home_introduce.png"/>
+                </div>
+
+                <div className={classes.root} class="Home-body">
                     <Grid 
                         container
                         direction="column"
                         justify="center"
                         alignItems="center">
                         <form className={classes.textfield} noValidate autoComplete="off">
-                        <Grid item xs={12}>    
-                            <TextField
-                                id="input_name"
-                                placeholder="이름을 입력하세요."
-                                variant="outlined"
-                                fullWidth="true"
-                                // inputProps={{style: {fontSize: 19}}} 폰트 사이즈 변경
-                                />
-                        </Grid>
-                        <Grid item xs={12}> 
-                            <TextField
-                                id="input_email"
-                                placeholder="이메일을 입력하세요."
-                                variant="outlined"
-                                fullWidth="true"
-                                InputLabelProps={{style: {fontSize: 19}}}/>
-                        </Grid>
+                            <Grid item xs={12}>    
+                                <TextField
+                                    id="input_name"
+                                    placeholder="이름을 입력하세요."
+                                    variant="outlined"
+                                    fullWidth="true"
+                                    // inputProps={{style: {fontSize: 19}}} 폰트 사이즈 변경
+                                    />
+                            </Grid>
+
+                            <Grid item xs={12}> 
+                                <TextField
+                                    id="input_email"
+                                    placeholder="이메일을 입력하세요."
+                                    variant="outlined"
+                                    fullWidth="true"
+                                    InputLabelProps={{style: {fontSize: 19}}}/>
+                            </Grid>
+                            
                             {/* 개인정보 정책에 연결시켜주는 버튼
                             <img class="Home-policy" src=""/> */}
-                            </form>
+                        </form>
+
                         <Grid item xs={12}>
                             <Button><img src="btn_subscribe.png" width="157.9px"></img></Button>
                         </Grid>

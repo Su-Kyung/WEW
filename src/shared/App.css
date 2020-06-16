@@ -86,6 +86,13 @@
   background-color: #ffffff;
 }
 
+.Home-head {
+  margin-top: 75px;
+  flex-grow: 1;
+}
+
+
+
 /* .App-home-body {
   background-color: white;
   min-height: 50vh;
