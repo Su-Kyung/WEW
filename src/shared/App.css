@@ -91,7 +91,10 @@
   flex-grow: 1;
 }
 
-
+.Text-color {
+  color: #ffffff;
+  flex-grow: 1;
+}
 
 /* .App-home-body {
   background-color: white;
