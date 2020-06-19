@@ -6,19 +6,6 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 
-function Copyright() {
-  return (
-    <Typography variant="body2" color="textSecondary" align="center">
-      {'Copyright © '}
-      <Link color="inherit" href="https://www.instagram.com/we_woo_2020/">
-        WEW 인스타그램
-      </Link>{' '}
-      {new Date().getFullYear()}
-      {'.'}
-    </Typography>
-  );
-}
-
 const useStyles = makeStyles((theme) => ({
   paper: {
     marginTop: theme.spacing(8),
@@ -52,12 +39,6 @@ const About = () => {
         <div className={classes.paper} >
             <img src="newsletter_about2.png" width="677.5px" />
         </div>
-        </Container>
-
-        <Container component="main" maxWidth="xl">
-        <Box mt={5}>
-            <Copyright />
-        </Box>
         </Container>
     </div>
   );

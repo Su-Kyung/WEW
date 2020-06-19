@@ -9,18 +9,6 @@ import Grid from '@material-ui/core/Grid';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 
-function Copyright() {
-  return (
-    <Typography variant="body2" color="textSecondary" align="center">
-      {'Copyright © '}
-      <Link color="inherit" href="https://www.instagram.com/we_woo_2020/">
-        WEW 인스타그램
-      </Link>{' '}
-      {new Date().getFullYear()}
-      {'.'}
-    </Typography>
-  );
-}
 
 const useStyles = makeStyles((theme) => ({
   paper: {
@@ -109,12 +97,6 @@ const Feedback = () => {
                     </form>
                 </div>
             </Container>
-        </Container>
-
-        <Container component="main" maxWidth="xl">
-        <Box mt={5}>
-            <Copyright />
-        </Box>
         </Container>
     </div>
   );

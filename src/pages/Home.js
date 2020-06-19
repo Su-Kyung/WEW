@@ -1,13 +1,10 @@
 import React from 'react';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
-import Container from '@material-ui/core/Container';
 import { createMuiTheme, withStyles, makeStyles, ThemeProvider } from '@material-ui/core/styles';
 
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
-import Link from '@material-ui/core/Link';
-import Box from '@material-ui/core/Box';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -36,29 +33,6 @@ const useStyles = makeStyles((theme) => ({
         marginBottom: '56px',
     },
 }));
-
-function Copyright() {
-    return (
-        <div align="center">
-            <Typography class="Text-color">
-                {'ABOUT WEW'}
-            </Typography>
-            <Typography class="Text-color">
-                {'WEW | 대표자명 | wewoo2020@gmail.com'}
-            </Typography>
-            <Typography class="Text-color">
-                <Link color="inherit" href="https://www.instagram.com/we_woo_2020/">
-                    {'WEW 인스타그램'}
-                </Link>
-                {' | 추후 개설 연재 플랫폼 링크'}
-            </Typography>
-            <Typography class="Text-color">
-                {'Copyright © WEW'}
-            </Typography>
-        </div>
-    );
-  }
-
 
 const Home = () => {
     const classes = useStyles();
@@ -120,14 +94,6 @@ const Home = () => {
                             </Button>
                         </Grid>
                     </Grid>
-
-                    <img class="Line-border" src="line_border.png"/>
-                    
-                    <Container component="footer" maxWidth="xl">
-                        <Box mt={5}>
-                            <Copyright />
-                        </Box>
-                    </Container>
 
                 </div>
 

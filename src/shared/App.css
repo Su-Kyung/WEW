@@ -92,7 +92,7 @@
 }
 
 .Text-color {
-  color: #ffffffb4;
+  color: #e0e0e0;
   flex-grow: 1;
   margin-top: -0.5px;
 }
@@ -123,7 +123,7 @@
 }
 
 .Home-body {
-  height: 569px;
+  height: 320px;
   background-color: #27385e;
   padding-top: 75px;
 }
