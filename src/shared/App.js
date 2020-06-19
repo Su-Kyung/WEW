@@ -15,6 +15,8 @@ import MenuIcon from "@material-ui/icons/Menu";
 import SimpleDialogDemo from '../components/simple';
 import Grid from '@material-ui/core/Grid';
 
+import Header from './Header';
+import Container from '@material-ui/core/Container';
 
 
 // 앱 컴포넌트: 어떤 주소로 왔을 때 무엇을 보여줄지 정의
@@ -24,12 +26,33 @@ class App extends Component {
     return (
       <div>
         
+        <Container xs={12}>
+        <Header title="WEW"  />
+        {/* <main>
+          <MainFeaturedPost post={mainFeaturedPost} />
+          <Grid container spacing={4}>
+            {featuredPosts.map((post) => (
+              <FeaturedPost key={post.title} post={post} />
+            ))}
+          </Grid>
+          <Grid container spacing={5} className={classes.mainGrid}>
+            <Main title="From the firehose" posts={posts} />
+            <Sidebar
+              title={sidebar.title}
+              description={sidebar.description}
+              archives={sidebar.archives}
+              social={sidebar.social}
+            />
+          </Grid>
+        </main> */}
+      </Container>
+{/*       
         <Toolbar >
         
           <img class="App-header-logo" src="/logo_indigo.png" />
           <IconButton type="button" onClick={SimpleDialogDemo.HandleClickOpen}><MenuIcon /></IconButton>
           
-        </Toolbar>
+        </Toolbar> */}
 
         
 
