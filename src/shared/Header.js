@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(1),
     flexShrink: 0,
   },
-  iconColor: {
+  menuIcon: {
     color: '#27385e',
   },
   fakeIcon: {
@@ -52,7 +52,7 @@ export default function Header(props) {
           <img src="/logo_indigo.png" width="188px"></img>
         </Typography>
         <IconButton>
-          <MenuIcon style={{ fontSize: 80 }} className={classes.iconColor} />
+          <MenuIcon style={{ fontSize: 80 }} className={classes.menuIcon} />
         </IconButton>
       </Toolbar>
     </React.Fragment>

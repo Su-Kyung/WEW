@@ -63,10 +63,22 @@ const Home = () => {
         <div>
             <body>
 
-                <div class="Home-head">
+                <div className={classes.root} >
+                    <Grid 
+                        container
+                        direction="column"
+                        justify="center"
+                        alignItems="center">
+                        <img src="line_home_introduce.png" class="Line-introduce"/>
+                        <img src="home_introduce.png" width="334.6px" class="Home-introduce"/>
+                    </Grid>
+                </div>
+
+
+                {/* <div class="Home-head">
                     <img class="Line-introduce" src="line_home_introduce.png"/>
                     <img class="Home-introduce" src="home_introduce.png"/>
-                </div>
+                </div> */}
 
                 <div className={classes.root} class="Home-body">
                     <Grid 
