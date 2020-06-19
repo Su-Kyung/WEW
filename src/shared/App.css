@@ -92,8 +92,9 @@
 }
 
 .Text-color {
-  color: #ffffff;
+  color: #ffffffb4;
   flex-grow: 1;
+  margin-top: -0.5px;
 }
 
 /* .App-home-body {
@@ -124,6 +125,7 @@
 .Home-body {
   height: 569px;
   background-color: #27385e;
+  padding-top: 75px;
 }
 
 .Home-input-name {

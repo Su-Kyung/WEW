@@ -30,7 +30,11 @@ const useStyles = makeStyles((theme) => ({
         '& > *': {
             flexGrow: 1,
         },
-    }
+    },
+    btnSubscribe: {
+        marginTop: '14px',
+        marginBottom: '56px',
+    },
 }));
 
 function Copyright() {
@@ -74,12 +78,6 @@ const Home = () => {
                     </Grid>
                 </div>
 
-
-                {/* <div class="Home-head">
-                    <img class="Line-introduce" src="line_home_introduce.png"/>
-                    <img class="Home-introduce" src="home_introduce.png"/>
-                </div> */}
-
                 <div className={classes.root} class="Home-body">
                     <Grid 
                         container
@@ -87,7 +85,7 @@ const Home = () => {
                         justify="center"
                         alignItems="center">
                         <form className={classes.textfield} noValidate autoComplete="off">
-                            <Grid item xs={12}>    
+                            <Grid item xs={12} >    
                                 <TextField
                                     id="input_name"
                                     placeholder="이름을 입력하세요."
@@ -117,7 +115,9 @@ const Home = () => {
                         <img class="Home-policy" src=""/> */}
 
                         <Grid item xs={12}>
-                            <Button><img src="btn_subscribe.png" width="157.9px"></img></Button>
+                            <Button className={classes.btnSubscribe}>
+                                <img src="btn_subscribe.png" width="157.9px"></img>
+                            </Button>
                         </Grid>
                     </Grid>
 
