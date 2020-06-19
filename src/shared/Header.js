@@ -24,15 +24,23 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(1),
     flexShrink: 0,
   },
+  iconColor: {
+    color: '#27385e',
+  },
+  fakeIcon: {
+    color: '#fff',
+  },
 }));
 
 export default function Header(props) {
   const classes = useStyles();
-  const { title } = props;
 
   return (
     <React.Fragment>
       <Toolbar className={classes.toolbar}>
+        <IconButton disabled='true'>
+          <MenuIcon style={{ fontSize: 80 }} className={classes.fakeIcon}/>
+        </IconButton>
         <Typography
           component="h2"
           variant="h5"
@@ -44,14 +52,9 @@ export default function Header(props) {
           <img src="/logo_indigo.png" width="188px"></img>
         </Typography>
         <IconButton>
-          <MenuIcon/>
+          <MenuIcon style={{ fontSize: 80 }} className={classes.iconColor} />
         </IconButton>
       </Toolbar>
     </React.Fragment>
   );
 }
-
-Header.propTypes = {
-  sections: PropTypes.array,
-  title: PropTypes.string,
-};
