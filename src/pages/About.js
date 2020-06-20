@@ -28,17 +28,17 @@ const About = () => {
   return (
     <div>
         <Container component="main1" maxWidth="xl" className={classes.areaIndigo} >
-        <CssBaseline />
-        <div className={classes.paper} >
-            <img src="newsletter_about1.png" width="618.3px" />
-        </div>
+          <CssBaseline />
+          <div className={classes.paper} >
+              <img src="newsletter_about1.png" width="618.3px" />
+          </div>
         </Container>
 
         <Container component="main2" maxWidth="xl" className={classes.areaWhite} >
-        <CssBaseline />
-        <div className={classes.paper} >
-            <img src="newsletter_about2.png" width="677.5px" />
-        </div>
+          <CssBaseline />
+          <div className={classes.paper} >
+              <img src="newsletter_about2.png" width="677.5px" />
+          </div>
         </Container>
     </div>
   );
