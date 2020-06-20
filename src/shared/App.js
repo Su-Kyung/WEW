@@ -3,18 +3,8 @@ import { Component } from 'react';
 import './App.css';
 import { Route } from 'react-router-dom';
 import { Home, About, Feedback } from 'pages';
-import Button from '@material-ui/core/Button';
-
-
-import Toolbar from "@material-ui/core/Toolbar";
-import IconButton from "@material-ui/core/IconButton";
-import Typography from "@material-ui/core/Typography";
-import MenuIcon from "@material-ui/icons/Menu";
-
-
-import SimpleDialogDemo from '../components/simple';
-import Grid from '@material-ui/core/Grid';
-
+import Header from './Header';
+import Footer from './Footer';
 
 
 // 앱 컴포넌트: 어떤 주소로 왔을 때 무엇을 보여줄지 정의
@@ -23,19 +13,14 @@ class App extends Component {
     
     return (
       <div>
-        
-        <Toolbar >
-        
-          <img class="App-header-logo" src="/logo_indigo.png" />
-          <IconButton type="button" onClick={SimpleDialogDemo.HandleClickOpen}><MenuIcon /></IconButton>
-          
-        </Toolbar>
-
-        
+  
+        <Header />
 
         <Route exact path="/" component={Home}/>
         <Route path="/about" component={About}/>
         <Route path="/feedback" component={Feedback}/>
+
+        <Footer />
       </div>
     );
   }
