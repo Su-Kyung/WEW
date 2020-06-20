@@ -12,6 +12,8 @@ const useStyles = makeStyles((theme) => ({
   toolbar: {
     // borderBottom: `1px solid ${theme.palette.divider}`,
     paddingTop: '100px',
+    backgroundColor: '#fff',
+    paddingBottom: theme.spacing(8),
   },
   toolbarTitle: {
     flex: 1,
@@ -32,7 +34,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Header(props) {
+export default function Header() {
   const classes = useStyles();
 
   return (

@@ -39,7 +39,6 @@ const Home = () => {
 
     return (
         <div>
-            <body>
 
                 <div className={classes.root} >
                     <Grid 
@@ -97,7 +96,6 @@ const Home = () => {
 
                 </div>
 
-            </body>
         </div>
     )
 }
