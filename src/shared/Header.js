@@ -6,25 +6,21 @@ import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from "@material-ui/icons/Menu";
 import Typography from '@material-ui/core/Typography';
-import Link from '@material-ui/core/Link';
 
-import SimpleModal from '@material-ui/core/Modal';
-import Modal from '@material-ui/core/Modal';
+import Dialog from '@material-ui/core/Dialog';
+import DialogActions from '@material-ui/core/DialogActions';
+import DialogContent from '@material-ui/core/DialogContent';
+import DialogContentText from '@material-ui/core/DialogContentText';
+import DialogTitle from '@material-ui/core/DialogTitle';
+import FormControl from '@material-ui/core/FormControl';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+import InputLabel from '@material-ui/core/InputLabel';
+import MenuItem from '@material-ui/core/MenuItem';
+import Select from '@material-ui/core/Select';
+import Switch from '@material-ui/core/Switch';
+import { Home, About, Feedback } from 'pages';
+import { Route } from 'react-router-dom';
 
-function rand() {
-  return Math.round(Math.random() * 20) - 10;
-}
-
-function getModalStyle() {
-  const top = 50 + rand();
-  const left = 50 + rand();
-
-  return {
-    top: `${top}%`,
-    left: `${left}%`,
-    transform: `translate(-${top}%, -${left}%)`,
-  };
-}
 
 const useStyles = makeStyles((theme) => ({
   toolbar: {
@@ -51,24 +47,34 @@ const useStyles = makeStyles((theme) => ({
     color: '#fff',
   },
 
-  paper: {
-    position: 'absolute',
-    width: 400,
-    backgroundColor: theme.palette.background.paper,
-    border: '2px solid #000',
-    boxShadow: theme.shadows[5],
-    padding: theme.spacing(2, 4, 3),
+  // 메뉴 dialog
+  form: {
+    display: 'flex',
+    flexDirection: 'column',
+    margin: 'auto',
+    width: 'fit-content',
   },
+  formControl: {
+    marginTop: theme.spacing(2),
+    minWidth: 120,
+  },
+  formControlLabel: {
+    marginTop: theme.spacing(1),
+  },
+  dialog: {
+    color: '#27385e',
+  }
 }));
 
 export default function Header() {
   const classes = useStyles();
 
-
-  const [modalStyle] = React.useState(getModalStyle);
+  // 메뉴 Dialog
   const [open, setOpen] = React.useState(false);
+  const [fullWidth, setFullWidth] = React.useState(true);
+  const [maxWidth, setMaxWidth] = React.useState('sm');
 
-  const handleOpen = () => {
+  const handleClickOpen = () => {
     setOpen(true);
   };
 
@@ -76,15 +82,18 @@ export default function Header() {
     setOpen(false);
   };
 
-  const body = (
-    <div style={modalStyle} className={classes.paper}>
-      <h2 id="simple-modal-title">Text in a modal</h2>
-      <p id="simple-modal-description">
-        Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
-      </p>
-      <SimpleModal />
-    </div>
-  );
+  const routeHome = () => {
+    window.location.href="/";
+  }
+
+  const routeAbout = () => {
+    window.location.href="/about";
+  }
+
+  const routeFeedback = () => {
+    window.location.href="/feedback";
+  }
+
 
   return (
     <React.Fragment>
@@ -102,19 +111,36 @@ export default function Header() {
         >
           <img src="/logo_indigo.png" width="188px"></img>
         </Typography>
-        <IconButton type="button" onClick={handleOpen}>
+        <IconButton type="button" onClick={handleClickOpen}>
           <MenuIcon style={{ fontSize: 80 }} className={classes.menuIcon}/>
         </IconButton>
       </Toolbar>
 
-      <Modal
+      {/* 메뉴 Dialog */}
+      <Dialog
+        fullWidth={fullWidth}
+        maxWidth={maxWidth}
         open={open}
         onClose={handleClose}
-        aria-labelledby="simple-modal-title"
-        aria-describedby="simple-modal-description"
+        aria-labelledby="max-width-dialog-title"
+        className={classes.dialog}
       >
-        {body}
-      </Modal>
+        <DialogTitle id="max-width-dialog-title" className={classes.form}>
+          <img src="/logo_big_white.png" width="188px"></img>
+        </DialogTitle>
+
+        <DialogActions className={classes.form} noValidate>
+          <Button onClick={routeHome}>
+            <img src="/btn_menu_home.png" width="188px"></img>
+          </Button>
+          <Button onClick={routeAbout}>
+            <img src="/btn_menu_about.png" width="188px"></img>
+          </Button>
+          <Button onClick={routeFeedback} backgroundColor="#27385e">
+            <img src="/btn_menu_feedback.png" width="188px"></img>
+          </Button>
+        </DialogActions>
+      </Dialog>
     </React.Fragment>
   );
 }
