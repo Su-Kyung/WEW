@@ -6,7 +6,21 @@ import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from "@material-ui/icons/Menu";
 import Typography from '@material-ui/core/Typography';
-import Link from '@material-ui/core/Link';
+
+import Dialog from '@material-ui/core/Dialog';
+import DialogActions from '@material-ui/core/DialogActions';
+import DialogContent from '@material-ui/core/DialogContent';
+import DialogContentText from '@material-ui/core/DialogContentText';
+import DialogTitle from '@material-ui/core/DialogTitle';
+import FormControl from '@material-ui/core/FormControl';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+import InputLabel from '@material-ui/core/InputLabel';
+import MenuItem from '@material-ui/core/MenuItem';
+import Select from '@material-ui/core/Select';
+import Switch from '@material-ui/core/Switch';
+import { Home, About, Feedback } from 'pages';
+import { Route } from 'react-router-dom';
+
 
 const useStyles = makeStyles((theme) => ({
   toolbar: {
@@ -32,10 +46,58 @@ const useStyles = makeStyles((theme) => ({
   fakeIcon: {
     color: '#fff',
   },
+
+  // 메뉴 dialog
+  form: {
+    display: 'flex',
+    flexDirection: 'column',
+    paddingTop: theme.spacing(20),
+    // margin: 'auto',
+    // width: 'fit-content',
+  },
+  formControl: {
+    marginTop: theme.spacing(2),
+    minWidth: 120,
+  },
+  formControlLabel: {
+    marginTop: theme.spacing(1),
+  },
+  paper: {
+    backgroundColor: "transparent",
+    boxShadow: "none",
+    overflow: "hidden"
+  },
+  root: {
+    backgroundColor: "transparent",
+  }
 }));
 
 export default function Header() {
   const classes = useStyles();
+
+  // 메뉴 Dialog
+  const [open, setOpen] = React.useState(false);
+
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
+  const routeHome = () => {
+    window.location.href="/";
+  }
+
+  const routeAbout = () => {
+    window.location.href="/about";
+  }
+
+  const routeFeedback = () => {
+    window.location.href="/feedback";
+  }
+
 
   return (
     <React.Fragment>
@@ -53,10 +115,46 @@ export default function Header() {
         >
           <img src="/logo_indigo.png" width="188px"></img>
         </Typography>
-        <IconButton>
-          <MenuIcon style={{ fontSize: 80 }} className={classes.menuIcon} />
+        <IconButton type="button" onClick={handleClickOpen}>
+          <MenuIcon style={{ fontSize: 80 }} className={classes.menuIcon}/>
         </IconButton>
       </Toolbar>
+
+      {/* 메뉴 Dialog */}
+      <Dialog
+        maxWidth='sm'
+        open={open}
+        onClose={handleClose}
+        aria-labelledby="max-width-dialog-title"
+        BackdropProps={{
+          classes: {
+           root: classes.root,
+          }
+         }
+        }
+        PaperProps ={{
+          classes: {
+           root: classes.paper
+          }
+        }}
+        class="Menu-background"
+      >
+        <DialogTitle id="max-width-dialog-title">
+          <img src="/logo_big_white.png" width="188px" ></img>
+        </DialogTitle>
+
+        <DialogActions className={classes.form} noValidate>
+          <Button onClick={routeHome} className={classes.formControl}>
+            <img src="/btn_menu_home.png" width="130px"></img>
+          </Button>
+          <Button onClick={routeAbout} className={classes.formControl}>
+            <img src="/btn_menu_about.png" width="206.8px"></img>
+          </Button>
+          <Button onClick={routeFeedback} className={classes.formControl}>
+            <img src="/btn_menu_feedback.png" width="200px"></img>
+          </Button>
+        </DialogActions>
+      </Dialog>
     </React.Fragment>
   );
 }

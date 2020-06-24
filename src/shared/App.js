@@ -27,23 +27,4 @@ class App extends Component {
 }
 
 
-
-
-
-
-
-
 export default App;
-
-
-            // <DialogContent dividers>
-            //   <Button id="btn_home">
-            //     <img src="/btn_menu_home.png" width="150.4px" height="auto" text-align="center" onClick={handleClickOpen}/>
-            //   </Button>
-            //   <Button id="btn_about"> 
-            //     <img src="/btn_menu_about.png" width="306.8px" height="auto" text-align="center" onClick={handleClickOpen}/>
-            //   </Button>
-            //   <Button id="btn_feedback">
-            //     <img src="/btn_menu_feedback.png" width="306.5px" height="auto" text-align="center" onClick={handleClickOpen}/>
-            //   </Button>
-            // </DialogContent>
