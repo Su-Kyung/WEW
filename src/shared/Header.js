@@ -51,8 +51,9 @@ const useStyles = makeStyles((theme) => ({
   form: {
     display: 'flex',
     flexDirection: 'column',
-    margin: 'auto',
-    width: 'fit-content',
+    paddingTop: theme.spacing(20),
+    // margin: 'auto',
+    // width: 'fit-content',
   },
   formControl: {
     marginTop: theme.spacing(2),
@@ -61,8 +62,13 @@ const useStyles = makeStyles((theme) => ({
   formControlLabel: {
     marginTop: theme.spacing(1),
   },
-  dialog: {
-    color: '#27385e',
+  paper: {
+    backgroundColor: "transparent",
+    boxShadow: "none",
+    overflow: "hidden"
+  },
+  root: {
+    backgroundColor: "transparent",
   }
 }));
 
@@ -71,8 +77,6 @@ export default function Header() {
 
   // 메뉴 Dialog
   const [open, setOpen] = React.useState(false);
-  const [fullWidth, setFullWidth] = React.useState(true);
-  const [maxWidth, setMaxWidth] = React.useState('sm');
 
   const handleClickOpen = () => {
     setOpen(true);
@@ -118,26 +122,36 @@ export default function Header() {
 
       {/* 메뉴 Dialog */}
       <Dialog
-        fullWidth={fullWidth}
-        maxWidth={maxWidth}
+        maxWidth='sm'
         open={open}
         onClose={handleClose}
         aria-labelledby="max-width-dialog-title"
-        className={classes.dialog}
+        BackdropProps={{
+          classes: {
+           root: classes.root,
+          }
+         }
+        }
+        PaperProps ={{
+          classes: {
+           root: classes.paper
+          }
+        }}
+        class="Menu-background"
       >
-        <DialogTitle id="max-width-dialog-title" className={classes.form}>
-          <img src="/logo_big_white.png" width="188px"></img>
+        <DialogTitle id="max-width-dialog-title">
+          <img src="/logo_big_white.png" width="188px" ></img>
         </DialogTitle>
 
         <DialogActions className={classes.form} noValidate>
-          <Button onClick={routeHome}>
-            <img src="/btn_menu_home.png" width="188px"></img>
+          <Button onClick={routeHome} className={classes.formControl}>
+            <img src="/btn_menu_home.png" width="130px"></img>
           </Button>
-          <Button onClick={routeAbout}>
-            <img src="/btn_menu_about.png" width="188px"></img>
+          <Button onClick={routeAbout} className={classes.formControl}>
+            <img src="/btn_menu_about.png" width="206.8px"></img>
           </Button>
-          <Button onClick={routeFeedback} backgroundColor="#27385e">
-            <img src="/btn_menu_feedback.png" width="188px"></img>
+          <Button onClick={routeFeedback} className={classes.formControl}>
+            <img src="/btn_menu_feedback.png" width="200px"></img>
           </Button>
         </DialogActions>
       </Dialog>
