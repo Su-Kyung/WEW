@@ -20,25 +20,17 @@ const useStyles = makeStyles((theme) => ({
   areaWhite: {
     backgroundColor: '#fff',
   },
+  aboutTitle: {
+    paddingBottom: theme.spacing(10),
+  }
 }));
 
 const About = () => {
   const classes = useStyles();
 
   return (
-    <div className={classes.areaWhite}>
-      <Container
-        component="subHeader"
-        maxWidth="sm">
-          <div maxWidth="sm">
-            <img src="about_title.png" width="278.1px" ></img>
-          </div>
-          <div className={classes.subtitle} maxWidth="sm">
-            <img src="about_subtitle.png" width="587.1px"></img>
-          </div>
-          
-      </Container>
-
+    <div className={classes.areaWhite} align="center">
+      <img src="about_title.png" width="600px" className={classes.aboutTitle}></img>
 
       <Container component="main1" maxWidth="xl" className={classes.areaIndigo} >
         <CssBaseline />
