@@ -51,9 +51,9 @@ const useStyles = makeStyles((theme) => ({
   form: {
     display: 'flex',
     flexDirection: 'column',
-    paddingTop: theme.spacing(20),
-    // margin: 'auto',
-    // width: 'fit-content',
+    paddingTop: theme.spacing(12),
+    margin: 'auto',
+    width: 'fit-content',
   },
   formControl: {
     marginTop: theme.spacing(2),
@@ -65,7 +65,9 @@ const useStyles = makeStyles((theme) => ({
   paper: {
     backgroundColor: "transparent",
     boxShadow: "none",
-    overflow: "hidden"
+    overflow: "hidden",
+    alignSelf: "start",
+    paddingTop: theme.spacing(7),
   },
   root: {
     backgroundColor: "transparent",
@@ -145,7 +147,7 @@ export default function Header() {
 
         <DialogActions className={classes.form} noValidate>
           <Button onClick={routeHome} className={classes.formControl}>
-            <img src="/btn_menu_home.png" width="130px"></img>
+            <img src="/btn_menu_home.png" width="120px"></img>
           </Button>
           <Button onClick={routeAbout} className={classes.formControl}>
             <img src="/btn_menu_about.png" width="206.8px"></img>
