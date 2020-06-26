@@ -1,8 +1,5 @@
 import React from 'react';
 import CssBaseline from '@material-ui/core/CssBaseline';
-import Link from '@material-ui/core/Link';
-import Box from '@material-ui/core/Box';
-import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
@@ -64,7 +61,7 @@ const Feedback = () => {
         component="subHeader"
         maxWidth="sm">
           <div>
-            <img src="feedback_title.png" width="281.7px" ></img>
+            <img src="feedback_title.png" width="200px" ></img>
           </div>
           <div className={classes.subtitle}>
             <img src="feedback_subtitle.png" width="587.1px"></img>

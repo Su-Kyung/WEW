@@ -97,6 +97,11 @@
   margin-top: -0.5px;
 }
 
+.Footer-text {
+  color: #7c7c7c;
+  text-align: left;
+}
+
 /* .App-home-body {
   background-color: white;
   min-height: 50vh;
