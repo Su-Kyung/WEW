@@ -29,7 +29,7 @@ const About = () => {
 
   return (
     <div className={classes.areaWhite} align="center">
-      <img src="about_title.png" width="600px" className={classes.aboutTitle}></img>
+      <img src="about_title_web.png" width="1300px" className={classes.aboutTitle}></img>
 
       <Container component="main1" maxWidth="xl" className={classes.areaIndigo} >
         <CssBaseline />

@@ -64,7 +64,7 @@ const Feedback = () => {
         component="subHeader"
         maxWidth="sm">
           <div>
-            <img src="feedback_title.png" width="281.7px" ></img>
+            <img src="feedback_title.png" width="200px" ></img>
           </div>
           <div className={classes.subtitle}>
             <img src="feedback_subtitle.png" width="587.1px"></img>
