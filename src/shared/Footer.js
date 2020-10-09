@@ -27,15 +27,22 @@ export default function Footer(props) {
           <Typography class="Footer-text" display="block">
             ABOUT WEW <br/>
 
-            WEW | 대표자명 | wewoo2020@gmail.com <br/>
+            WEW | 대표자 박 지 민 | 이메일 wewoo2020@gmail.com <br/>
 
-            <Link color="inherit" href="https://www.instagram.com/we_woo_2020/">
-              {/* <InstagramIcon></InstagramIcon> */}
-              WEW Instagram
+            문의와 피드백은 위의 이메일로 부탁드립니다. <br/>
+            
+            {/* <InstagramIcon></InstagramIcon> */}
+
+            <Link color="inherit" href="https://www.notion.so/WELCOME-TO-WEW-1cc9fbe9b0fb4a0f8322d493f41de2e5">
+              위유 노션
             </Link>
             {' | '}
-            <Link color="inherit" href="https://www.notion.so/WELCOME-TO-WEW-1cc9fbe9b0fb4a0f8322d493f41de2e5">
-              WEW Notion
+            <Link color="inherit" href="https://www.instagram.com/we_woo_2020/">
+              위유 인스타그램
+            </Link>
+            {' | '}
+            <Link color="inherit" href="https://blog.naver.com/wewoo2020">
+              위유 네이버 블로그
             </Link> <br/>
 
             Copyright © WEW
