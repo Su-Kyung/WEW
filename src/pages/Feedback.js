@@ -1,11 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
-
+// firebase 관련
+import db from "../firebase";
+import firebase from "../firebase";
+import { firestore } from "../firebase"
 
 const useStyles = makeStyles((theme) => ({
   paper: {
@@ -53,6 +56,21 @@ const useStyles = makeStyles((theme) => ({
 
 const Feedback = () => {
   const classes = useStyles();
+  const [email,setEmailInput] = useState("");
+  const [content, setContentInput] = useState("");
+  // 버튼 클릭시 todos에 state 추가
+  const addFeedback = (event) => {
+      event.preventDefault();
+      //! firestore에 데이터 추가하기!
+      //! collection - add
+      db.collection("feedback").add({
+          content: content,
+          email: email,
+      });
+      setEmailInput("");
+      setContentInput("");
+      alert("피드백 주셔서 감사합니다! 빠르게 답변해드릴게요.🙇🏻");
+  };
 
   return (
     <div>
@@ -79,7 +97,13 @@ const Feedback = () => {
               <form className={classes.form} noValidate>
                 <Grid container justify="flex-end">
                   <Grid item>
-                    <Button id="btn_submit" className={classes.submit} type="submit">
+                    <Button 
+                      id="btn_submit"
+                      className={classes.submit}
+                      type="submit"
+                      disabled={!email && !content} //! 인풋값이 없을 경우 기능이 작동하지 않도록!
+                      onClick={addFeedback}
+                    >
                       <img src="btn_submit.png" width="180px"></img>
                     </Button>
                   </Grid>
@@ -92,6 +116,10 @@ const Feedback = () => {
 
                   <Grid item xs={12} sm={10}>
                     <TextField
+                      value={email}
+                      onChange={(event)=> {
+                        setEmailInput(event.target.value);
+                      }}
                       id="feedback_email"
                       placeholder="회신받을 이메일 주소를 입력하세요."
                       variant="outlined"
@@ -109,6 +137,10 @@ const Feedback = () => {
                   </Grid>
                   <Grid item xs={12} sm={10} >
                     <TextField
+                      value={content}
+                      onChange={(event)=> {
+                        setContentInput(event.target.value);
+                      }}
                       id="feedback_contents"
                       multiline
                       fullWidth
