@@ -27,9 +27,9 @@ export default function Footer(props) {
           <Typography class="Footer-text" display="block">
             ABOUT WEW <br/>
 
-            WEW | 대표자 박 지 민 | 이메일 wewoo2020@gmail.com <br/>
+            WEW | 대표자 박 지 민 <br/>
 
-            문의와 피드백은 위의 이메일로 부탁드립니다. <br/>
+            문의 및 피드백 wewoo2020@gmail.com <br/>
             
             {/* <InstagramIcon></InstagramIcon> */}
 

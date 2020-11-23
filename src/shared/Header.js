@@ -20,6 +20,7 @@ import Select from '@material-ui/core/Select';
 import Switch from '@material-ui/core/Switch';
 import { Home, About, Feedback } from 'pages';
 import { Route } from 'react-router-dom';
+import Link from '@material-ui/core/Link';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -115,7 +116,9 @@ export default function Header() {
           noWrap
           className={classes.toolbarTitle}
         >
-          <img src="/logo_indigo.png" width="188px"></img>
+          <Link href="https://wewoo-4e68f.web.app/">  {/* home 주소 */}
+            <img src="/logo_indigo.png" width="188px"></img>
+          </Link>
         </Typography>
         <IconButton type="button" onClick={handleClickOpen}>
           <MenuIcon style={{ fontSize: 80 }} className={classes.menuIcon}/>
