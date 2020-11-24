@@ -5,6 +5,7 @@ import { Route } from 'react-router-dom';
 import { Home, About, Feedback } from 'pages';
 import Header from './Header';
 import Footer from './Footer';
+import AppAppBar from './AppAppBar';
 
 import { useMediaQuery } from 'react-responsive'
 
@@ -38,6 +39,7 @@ class App extends Component {
         {/* <Default>Not mobile (desktop or laptop or tablet)</Default> */}
 
         {/* <Desktop> */}
+          <AppAppBar />
           <Header />
           
           <Route exact path="/" component={Home}/>
@@ -47,6 +49,7 @@ class App extends Component {
           <Footer />
         {/* </Desktop> */}
 
+        {/* 아래 방법은 크기 변경될 때 다시 라우팅 되어야함 (좋은 방법이 아닌 듯 하다) */}
         {/* <Tablet>
           <Header />
           
