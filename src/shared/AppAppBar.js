@@ -7,12 +7,20 @@ import { withStyles } from '@material-ui/core/styles';
 import Link from '@material-ui/core/Link';
 import AppBar from '../components/AppBar';
 import Toolbar, { styles as toolbarStyles } from '../components/ToolBar';
-
+import * as handleClickOpen from '../components/Menu';
+import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from "@material-ui/icons/Menu"
+
 
 const styles = (theme) => ({
   title: {
-    fontSize: 24,
+    height: 86.4,
+    [theme.breakpoints.down('md')]: {
+      height: 60,
+    },
+    [theme.breakpoints.down('sm')]: {
+      height: 36,
+    },
   },
   placeholder: toolbarStyles(theme).root,
   toolbar: {
@@ -39,6 +47,13 @@ const styles = (theme) => ({
   },
   menuIcon: {
     color: '#27385e',
+    height: 86.4,
+    [theme.breakpoints.down('md')]: {
+      height: 64,
+    },
+    [theme.breakpoints.down('sm')]: {
+      height: 40,
+    },
   },
 });
 
@@ -51,23 +66,14 @@ function AppAppBar(props) {
         <Toolbar className={classes.toolbar}>
           <div className={classes.left} />
           <Link
-            variant="h6"
-            underline="none"
-            color="inherit"
-            className={classes.title}
             href="https://wewoo-4e68f.web.app/"
           >
-            <img src="/logo_indigo.png" width="188px"></img>
+            <img src="/logo_indigo.png" className={classes.title}></img>
           </Link>
           <div className={classes.right}>
-            <Link
-              variant="h6"
-              underline="none"
-              className={clsx(classes.rightLink, classes.linkSecondary)}
-              href="/premium-themes/onepirate/sign-up/"
-            >
-              <MenuIcon style={{ fontSize: 80 }} className={classes.menuIcon}/>
-            </Link>
+            <IconButton type="button" onClick={handleClickOpen}>
+              <MenuIcon style={{ fontSize: 80 }} className={classes.menuIcon} onClick={handleClickOpen}/>
+            </IconButton>
           </div>
         </Toolbar>
       </AppBar>
